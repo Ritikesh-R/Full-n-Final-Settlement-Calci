@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full and Final Settlement Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <div class="calculator">
+        <h2>Full and Final Settlement Calculator</h2>
+        <label for="salary">Current Monthly Salary:</label>
+        <input type="number" id="salary" min="0" required>
+        <label for="yearsWorked">Number of Years Worked:</label>
+        <input type="number" id="yearsWorked" min="0" required>
+        <label for="leaveBalance">Leave Balance (days):</label>
+        <input type="number" id="leaveBalance" min="0" required>
+        <label for="gratuityMonths">Gratuity Months:</label>
+        <input type="number" id="gratuityMonths" min="0" required>
+        <label for="bonus">Bonus (if any):</label>
+        <input type="number" id="bonus" min="0">
+        <label for="deductions">Deductions (if any):</label>
+        <input type="number" id="deductions" min="0">
+        <label for="otherEarnings">Other Earnings (if any):</label>
+        <input type="number" id="otherEarnings" min="0">
+        <button id="calculateButton">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
