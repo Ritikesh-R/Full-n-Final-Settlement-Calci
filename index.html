@@ -5,28 +5,156 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div>
     
     <div class="calculator">
+
         <div>
-            <h2>Full and Final Settlement Calculator</h2>
+            <h1 style="color: #46077a; text-align: center;">Full and Final Settlement Calculator</h1>
         </div>
-        <label for="salary">Current Monthly Salary:</label>
-        <input type="number" id="salary" min="0" required>
-        <label for="yearsWorked">Number of Years Worked:</label>
-        <input type="number" id="yearsWorked" min="0" required>
-        <label for="leaveBalance">Leave Balance (days):</label>
-        <input type="number" id="leaveBalance" min="0" required>
-        <label for="gratuityMonths">Gratuity Months:</label>
-        <input type="number" id="gratuityMonths" min="0" required>
-        <label for="bonus">Bonus (if any):</label>
-        <input type="number" id="bonus" min="0">
-        <label for="deductions">Deductions (if any):</label>
-        <input type="number" id="deductions" min="0">
-        <label for="otherEarnings">Other Earnings (if any):</label>
-        <input type="number" id="otherEarnings" min="0">
-        <button id="calculateButton">Calculate</button>
-        <div id="result"></div>
+
+        <div>
+            <h2>Salary Earnings</h2>
+
+            <p>Total working days in the month* <input type="number" min="0" max="31" value="0" class="slider"
+            id="myRangeValue" style=" border-radius: 5px;"></p><br><br>
+            <input type="range" min="0" max="31" value="0" class="slider" id="myRange" 
+            style="width: 95%; " placeholder="0 Days"> <br><br>
+    
+            <p>Total paid working days in the month* <input type="number" min="0" max="31" value="0" class="slider1" 
+            id="myRange1Value" style=" border-radius: 5px;"></p><br><br>
+            <input type="range" min="0" max="31" value="0" class="slider1" id="myRange1" 
+            style="width: 95%;"placeholder="0 Days"> <br> <br>
+
+            <label for="Basic-salary">Basic Salary:</label>
+            <input type="number" id="salary" min="0" required placeholder="₹ Enter amount">
+
+            <label for="DA">Dearness allowance:</label>
+            <input type="number" id="DA" min="0" required placeholder="₹ Enter amount">
+
+            <label for="hra">HRA:</label>
+            <input type="number" id="hra" min="0" required placeholder="₹ Enter amount">
+
+            <label for="Conveyance">Conveyance allowance:</label>
+            <input type="number" id="Conveyance" min="0" placeholder="₹ Enter amount">
+
+            <label for="Medical">Medical Allowances:</label>
+            <input type="number" id="Medical" min="0" placeholder="₹ Enter amount">
+
+            <label for="Special">Special Allowances:</label>
+            <input type="number" id="Special" min="0" placeholder="₹ Enter amount">
+
+            <label for="Others">Others:</label>
+            <input type="number" id="Others" min="0" placeholder="₹ Enter amount">
+
+            <!-- <button id="calculateButton">Calculate</button> -->
+            <h3 id="total-salary">Total salary earnings: ₹ <span id="total_salary"></span> </h3>
+            <!-- <input type="text" id="total-salary" placeholder="₹ 0" style="    background-color: transparent;
+            border: 1px solid #272127; border-radius: 5px; padding: 10px;"> -->
+        </div>
+
+        <div style="
+            width: 100%;
+            border-bottom: 1px solid black;
+            margin: 0 auto;
+            ">
+        </div>
+
+        <div>
+            <h2>Other Earnings</h2>
+
+            <label for="leave">Leave encashment:</label>
+            <input type="number" id="leave" min="0" required placeholder="₹ Enter amount">
+
+            <label for="gratuity">Gratuity:</label>
+            <input type="number" id="gratuity" min="0" required placeholder="₹ Enter amount">
+
+            <label for="incentives">Incentives, if any:</label>
+            <input type="number" id="incentives" min="0" required placeholder="₹ Enter amount">
+
+            <label for="others1">Others:</label>
+            <input type="number" id="others1" min="0" placeholder="₹ Enter amount">
+
+            <h3 id="total-other">Total other earnings: ₹</h3>
+            <!-- <input type="text" id="total-other" placeholder="₹ 0" style=" background-color: transparent;
+            border: 1px solid #272127; border-radius: 5px; padding: 10px;"> -->
+
+        </div>
+
+        <div style="
+            width: 100%;
+            border-bottom: 1px solid black;
+            margin: 0 auto;
+            ">
+        </div>
+
+        <div>
+            <h2>Deductions</h2>
+
+            <label for="epf">Employee Provident Fund (EPF):</label>
+            <input type="number" id="epf" min="0" required placeholder="₹ Enter amount">
+
+            <label for="medical">Medical Insurance:</label>
+            <input type="number" id="medical" min="0" required placeholder="₹ Enter amount">
+
+            <label for="professional">Professional Tax:</label>
+            <input type="number" id="professional" min="0" required placeholder="₹ Enter amount">
+
+            <label for="salary-advance">Salary Advance:</label>
+            <input type="number" id="salary-advance" min="0" placeholder="₹ Enter amount">
+
+            <label for="notice-pay">Notice Pay:</label>
+            <input type="number" id="notice-pay" min="0" placeholder="₹ Enter amount">
+
+            <label for="others2">Others:</label>
+            <input type="number" id="others2" min="0" placeholder="₹ Enter amount">
+
+            <h3 id="total-deduction">Total deduction: ₹</h3>
+            <!-- <input type="text" id="total-deduction" placeholder="₹ 0" style="background-color: transparent;
+            border: 1px solid #272127; border-radius: 5px; padding: 10px;"> -->
+
+        </div>
+
+        <div style="
+            width: 100%;
+            border-bottom: 1px solid black;
+            margin: 0 auto;
+            ">
+        </div>
+
+        <h2 id="net-payable" style="color: green;">Net Payable Amount: ₹ <span id="net_payable"></span></h2>
+
+
     </div>
+
+  <div style="padding: 10px;">
+    <h1>What is the Full and final settlement?</h1>
+    <p>Full and final settlement, commonly known as the F&F settlement is a process followed by 
+        organizations to settle all the outstanding dues with an employee who is leaving the organization 
+        for the following reasons -
+    </p>
+
+
+    <div style="margin-left: 30px;">
+    <h3 ><span> 😞 Resignation</span></h3>
+    <h3><span>  😢Retirement</span></h3>
+    <h3><span>  😑 Termination</span></h3>
+    </div>
+
+    <p>The full and final settlement process involves calculating and paying the employee's 
+        last month's salary, tax deductions, bonus earnings, unused leaves, and any other 
+        outstanding dues such as reimbursements, gratuity, and provident fund.
+    </p>
+
+    <p>This settlement becomes crucial to ensure that both the employee and the employer 
+        settle all the outstanding financial obligations to each other before parting ways. 
+        It helps maintain a healthy relationship between the employer and the employee and 
+        avoids any legal disputes that may arise in the future.
+    </p>
+
+ </div>  
+
+</div>
 
     <script src="main.js"></script>
 </body>
