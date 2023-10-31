@@ -1,87 +1,62 @@
-/* Reset some default browser styles */
+/* Common Styles */
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
-/* Styling the body */
-body {
-  background-color: #f7f7f7;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-/* Styling the container */
 .calculator {
-  background-color: #828b99;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  max-width: 550px;
+  border-radius: 10px;
 }
 
-/* Styling input elements and labels */
-label {
- margin-top: 10px;
-  min-width: 108px;
-  color: #272127;
-  margin-bottom: 10px;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  line-height: 19px;
+h1, h2, h3 {
+  color: #46077a;
+  text-align: center;
 }
 
-input[type="number"] {
-  width: 95%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  margin-right: 10px;
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .slider, .slider1, input[type="number"], label {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  h2 {
+      margin-top: 20px;
+  }
 }
 
-/* Styling range inputs */
-input[type="range"] {
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5px;
-}
-
-/* Styling the total amounts */
-#total-salary, #total-other, #total-deduction {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* Styling the button */
-#calculateButton {
-  background-color: #0074cc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-/* Styling the button on hover */
-#calculateButton:hover {
-  background-color: #0056a5;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Desktop Styles */
+@media (min-width: 768px) {
   .calculator {
-    width: 90%;
+      padding: 30px;
+  }
+
+  .slider, .slider1 {
+      width: 100%;
+  }
+
+  .slider1 {
+      margin-top: 20px;
+  }
+
+  input[type="number"], label {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+  }
+
+  .total-salary, .total-other, .total-deduction, #net-payable {
+      text-align: right;
+  }
+
+  #net-payable {
+      color: green;
   }
 }
