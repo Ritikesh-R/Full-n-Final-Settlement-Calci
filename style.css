@@ -40,7 +40,7 @@ label {
 
 input[type="number"] {
   width: 95%;
-  padding: 10px;
+  padding: 12.5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 5px;
@@ -83,8 +83,8 @@ input[type="range"] {
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .calculator {
     width: 90%;
   }
-}
+} */
