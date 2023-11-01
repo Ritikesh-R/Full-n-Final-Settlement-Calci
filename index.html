@@ -16,6 +16,7 @@
         <div>
             <h2>Salary Earnings</h2>
 
+            <div style="font-size: larger; font-size: bold;">
             <p>Total working days in the month* <input type="number" min="0" max="31" value="0" class="slider"
             id="myRangeValue" style=" border-radius: 5px;"></p><br><br>
             <input type="range" min="0" max="31" value="0" class="slider" id="myRange" 
@@ -46,7 +47,7 @@
 
             <label for="Others">Others:</label>
             <input type="number" id="Others" min="0" placeholder="₹ Enter amount">
-
+            </div>
             <!-- <button id="calculateButton">Calculate</button> -->
             <h3 id="total-salary">Total salary earnings: ₹ <span id="total_salary"></span> </h3>
             <!-- <input type="text" id="total-salary" placeholder="₹ 0" style="    background-color: transparent;
@@ -63,6 +64,7 @@
         <div>
             <h2>Other Earnings</h2>
 
+            <div style="font-size: larger; font-weight: bold;">
             <label for="leave">Leave encashment:</label>
             <input type="number" id="leave" min="0" required placeholder="₹ Enter amount">
 
@@ -78,7 +80,7 @@
             <h3 id="total-other">Total other earnings: ₹</h3>
             <!-- <input type="text" id="total-other" placeholder="₹ 0" style=" background-color: transparent;
             border: 1px solid #272127; border-radius: 5px; padding: 10px;"> -->
-
+        </div>
         </div>
 
         <div style="
@@ -91,6 +93,7 @@
         <div>
             <h2>Deductions</h2>
 
+            <div style="font-weight: bold; font-size: larger;">
             <label for="epf">Employee Provident Fund (EPF):</label>
             <input type="number" id="epf" min="0" required placeholder="₹ Enter amount">
 
@@ -108,6 +111,7 @@
 
             <label for="others2">Others:</label>
             <input type="number" id="others2" min="0" placeholder="₹ Enter amount">
+        </div>
 
             <h3 id="total-deduction">Total deduction: ₹</h3>
             <!-- <input type="text" id="total-deduction" placeholder="₹ 0" style="background-color: transparent;
@@ -432,7 +436,7 @@
     </p>
 
     <p>As per Segment 72(5) of the E.P.F Act 1952, businesses must submit the E.P.F (Employer’s Provident Fund) 
-        guarantee forms within 5 days of the employee's claim
+        guarantee forms within 5 days of the employee's claim.
     </p>
     
     </div>
